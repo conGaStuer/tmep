@@ -8,8 +8,28 @@ import {
   faTimesCircle,
   faPaperPlane,
   faMagnifyingGlass,
+  faDownload,
+  faListDots,
+  faUserAstronaut,
+  faUserNinja,
+  faCat,
+  faDog,
+  faUserTie,
+  faFish,
 } from "@fortawesome/free-solid-svg-icons";
-import { faHeart, faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import {
+  faHeart,
+  faSave,
+  faUserCircle,
+} from "@fortawesome/free-regular-svg-icons";
+import {
+  faFacebookMessenger,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faAppStore,
+  faTumblr,
+} from "@fortawesome/free-brands-svg-icons";
 function SideBar() {
   const [isLiked, setIsliked] = React.useState(false);
   const [isLike, setIslike] = React.useState(false);
@@ -62,10 +82,12 @@ function SideBar() {
   const styleComment = {
     display: isComment ? "flex" : "none",
     top: isComment ? "-330px" : "100px",
+
+    height: isComment ? "400px" : "0px",
   };
   const styleShare = {
     display: isShare ? "flex" : "none",
-    top: isShare ? "-330px" : "100px",
+    top: isShare ? "-250px" : "100px",
   };
   return (
     <div className="side">
@@ -88,7 +110,7 @@ function SideBar() {
           <FontAwesomeIcon
             icon={faCommentDots}
             onClick={Comment}
-            className="sidebar-icons"
+            className="sidebar-icons ccc"
           />
         </div>
 
@@ -109,7 +131,7 @@ function SideBar() {
         </div>
       </section>
 
-      <div className="comment" style={styleComment}>
+      <div className="comment cmts" style={styleComment}>
         <div className="comments">
           <div className="comments-text">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -120,8 +142,9 @@ function SideBar() {
         <div className="comment-side">
           {comments.map((text) => (
             <div className="cmt">
-              <div className="user-cmt">1</div>
+              <div className="user-cmt"></div>
               {text}
+
               <FontAwesomeIcon
                 icon={isLike ? faHeartCircleCheck : faHeart}
                 style={styleLike}
@@ -142,20 +165,70 @@ function SideBar() {
           </div>
         </div>
       </div>
-      <div className="comment" style={styleShare}>
+      <div className="comment sharee" style={styleShare}>
         <div className="comments">
           <FontAwesomeIcon icon={faTimesCircle} onClick={ShareClose} />
         </div>
-        <div className="comment-side">
-          <div className="cmt">this is share</div>
-          <div className="cmt-side">
-            <input
-              className="write-comment"
-              placeholder="Write your commnent..."
-            />
-            <button className="send-comment">
-              <FontAwesomeIcon icon={faPaperPlane} />
-            </button>
+        <div className="share">
+          <div className="share-ele">
+            <span className="share-span">Friends</span>
+            <div className="share-opts">
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faUserAstronaut} className="avt1" />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faUserNinja} className="avt2" />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faCat} className="avt3" />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faDog} className="avt4" />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faUserTie} className="avt5" />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faFish} className="avt6" />
+              </div>
+            </div>
+          </div>
+          <div className="share-ele">
+            <span className="share-span">Another Apps</span>
+            <div className="share-opts">
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faFacebookMessenger} />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faFacebook} />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faTwitter} />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faAppStore} />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faInstagram} />
+              </div>
+              <div className="option-icon">
+                <FontAwesomeIcon icon={faTumblr} />
+              </div>
+            </div>
+          </div>
+          <div className="share-ele">
+            <span className="share-span">More</span>
+            <div className="share-opts">
+              <div className="option-icon op1">
+                <FontAwesomeIcon icon={faSave} className="op op1" />
+              </div>
+              <div className="option-icon op1">
+                <FontAwesomeIcon icon={faDownload} className="op op2" />
+              </div>
+              <div className="option-icon op1">
+                <FontAwesomeIcon icon={faListDots} className="op op3" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
