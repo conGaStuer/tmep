@@ -3,9 +3,9 @@ import React from "react";
 function Decription() {
   return (
     <section className="decription">
-      <div className="decription-username">1</div>
-      <div className="decription-title">2</div>
-      <div className="decription-script">3</div>
+      <div className="decription-username">TraXuan</div>
+      <div className="decription-title">Chieu nay em co ranh khong ?</div>
+      <div className="decription-script">TopTop Phake xai API chua`</div>
     </section>
   );
 }

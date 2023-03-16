@@ -68,7 +68,7 @@ function SideBar() {
     setIsSave(!isSave);
   };
   const styleLiked = {
-    color: isLiked ? " rgb(235, 57, 57)" : "rgb(215, 224, 224)",
+    color: isLiked ? " rgb(235, 57, 57)" : " rgb(250, 252, 252)",
   };
   const styleLike = {
     color: isLike ? " rgb(235, 57, 57)" : "rgb(156, 161, 161)",
@@ -77,7 +77,7 @@ function SideBar() {
     right: "20px",
   };
   const styleSaved = {
-    color: isSave ? " rgb(241, 238, 20)" : "rgb(215, 224, 224)",
+    color: isSave ? " rgb(241, 238, 20)" : " rgb(250, 252, 252)",
   };
   const styleComment = {
     display: isComment ? "flex" : "none",
