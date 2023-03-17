@@ -5,11 +5,10 @@ import {
   faUserFriends,
   faBell,
   faMessage,
-  faPlusSquare,
-  faPlus,
+  faArrowAltCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Menu() {
+function Menu({ data, currentVideo, setCurrentVideo, nextVideo }) {
   return (
     <section className="menu">
       <div className="menu-list">
@@ -22,10 +21,14 @@ function Menu() {
       </div>
       <div className="menu-list">
         <FontAwesomeIcon
-          icon={faPlusSquare}
+          icon={faArrowAltCircleDown}
           className="menu-icon menu-icon-plus"
+          onClick={nextVideo}
         />
-        <FontAwesomeIcon icon={faPlus} className="menu-icon menu-icon-Plus" />
+        {/* <FontAwesomeIcon
+          icon={faArrowDown}
+          className="menu-icon menu-icon-Plus"
+        /> */}
       </div>
       <div className="menu-list">
         <FontAwesomeIcon icon={faBell} className="menu-icon" />
